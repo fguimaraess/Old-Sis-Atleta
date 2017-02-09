@@ -1,0 +1,83 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	
+	<script type='text/javascript' 
+			src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-2.2.1.js">
+	</script>
+	<script type='text/javascript' 
+			src='https://cdn.firebase.com/v0/firebase.js'>
+	</script>
+	<script type='text/javascript'
+	        src='https://cdn.firebase.com/v0/firebase-simple-login.js'>
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/LoginViewModel.js" 
+			defer="defer">
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/SignUpViewModel.js" 
+			defer="defer">
+	</script>
+	
+	<script type='text/javascript' 
+			src="js/ViewModels.js" 
+			defer="defer">
+	</script>
+	
+	<link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+	
+</head>
+
+<body>
+	
+
+	<div id="signup" class="well" data-bind="visible: signupVM.isVisible">
+		<div  class="span">
+			
+		    <h1>Bem Vindo ao Sis-Atleta</h1>
+		    <p>Faça seu Cadastro</p>
+		    <p>
+		    	<input type="text" class="input" placeholder="E-mail" data-bind="value: signupVM.userName">
+		  		<input type="password" class="input" placeholder="Password" data-bind="value: signupVM.userPassword">
+		    </p>
+		    <p>	
+			    <a class="btn btn-primary btn-large" data-bind="click:signupVM.signup">
+					Cadastrar
+			    </a>
+			</p>
+			<p>
+			Caso você já tenha se cadastrado...
+			</p>
+			<p>
+			    <a class="btn btn-default btn-small" data-bind="click: loginVM.makeVisible">
+					Entrar
+			    </a>
+		    </p>
+	    </div>
+	</div>
+	
+	<div id="login" class="well" data-bind="visible: loginVM.isVisible">
+		<div class="span">
+		  	<h1>Faça seu Login</h1>
+		    <p>Seja bem vindo, Analista</p>
+		    <p>
+		    	<input type="text" class="input" placeholder="Email" data-bind="value: loginVM.userName">
+		  		<input type="password" class="input" placeholder="Password" data-bind="value: loginVM.userPassword">
+		    </p>
+		    <p>	
+			    <a class="btn btn-primary btn-large" data-bind="click:loginVM.login">
+					Entrar
+			    </a>
+			</p>
+		</div>
+	</div>
+	
+
+</body>
+
+
+
+
+
