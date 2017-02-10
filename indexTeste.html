@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+    <div class="mainDiv" align="center">
+    <h1 id='fireHeading' align='left'>Firebase Web App</h1>
+        <textarea id="mainTextName" placeholder="Nome 1"></textarea>
+        <textarea id="mainTextEmail" placeholder="E-mail 1"></textarea>
+        <p></p>
+        <textarea id="mainTextName2" placeholder="Nome 2"></textarea>
+        <textarea id="mainTextEmail2" placeholder="E-mail 2"></textarea>
+        <p></p>
+        <button id="submitBtn" onclick="submitClick();">Criar Usuários</button>
+        <button id="submitBtn2" onclick="submitClick2();">Test Push</button>
+    </div>
+        
+<script src="https://www.gstatic.com/firebasejs/3.6.9/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBrORJf-nCEZRybB4m7kkFqUuTnGTBnfLM",
+    authDomain: "sis-atleta.firebaseapp.com",
+    databaseURL: "https://sis-atleta.firebaseio.com",
+    storageBucket: "sis-atleta.appspot.com",
+    messagingSenderId: "499173726993"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="index.js"></script>
+
+</body>
+</head>
+</html>
